@@ -1,0 +1,46 @@
+class HelloThread$TestThread extends java.lang.Thread
+{
+    int y;
+
+    void <init>()
+    {
+        HelloThread$TestThread r0;
+
+        r0 := @this: HelloThread$TestThread;
+
+        specialinvoke r0.<java.lang.Thread: void <init>()>();
+
+        return;
+    }
+
+    public void run()
+    {
+        HelloThread$TestThread r0;
+        java.io.PrintStream $r1;
+        int $i0, $i1;
+
+        r0 := @this: HelloThread$TestThread;
+
+        staticinvoke <Log: void logFieldAcc(java.lang.Object,java.lang.String,boolean,boolean)>("$r1 = <java.lang.System: java.io.PrintStream out>", "name", 1, 0);
+
+        $r1 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r1.<java.io.PrintStream: void println(java.lang.String)>("This is running");
+
+        staticinvoke <Log: void logFieldAcc(java.lang.Object,java.lang.String,boolean,boolean)>("<HelloThread: int x> = 0", "name", 1, 1);
+
+        <HelloThread: int x> = 0;
+
+        staticinvoke <Log: void logFieldAcc(java.lang.Object,java.lang.String,boolean,boolean)>("$i0 = r0.<HelloThread$TestThread: int y>", "name", 0, 0);
+
+        $i0 = r0.<HelloThread$TestThread: int y>;
+
+        $i1 = $i0 + 1;
+
+        staticinvoke <Log: void logFieldAcc(java.lang.Object,java.lang.String,boolean,boolean)>("r0.<HelloThread$TestThread: int y> = $i1", "name", 0, 1);
+
+        r0.<HelloThread$TestThread: int y> = $i1;
+
+        return;
+    }
+}
